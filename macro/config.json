@@ -1,0 +1,32 @@
+{
+    "DESIGN_NAME": "i_macro",
+    "FP_PDN_MULTILAYER": false,
+    "CLOCK_PORT": "clock_i",
+    "CLOCK_PERIOD": 25,
+    "VERILOG_FILES": [
+        "dir::../../verilog/rtl/i_macro.v"
+    ],
+	"VDD_NETS": [
+		"vccd1"
+	],
+	"GND_NETS": [
+		"vssd1"
+	],
+	
+    "PL_TARGET_DENSITY": 0.52,
+	"DRT_THREADS": 24,
+    "STA_THREADS": 24,
+    "KLAYOUT_DRC_THREADS":24,    
+    "KLAYOUT_XOR_THREADS": 24,
+	"SYNTH_POWER_DEFINE": "USE_POWER_PINS",
+	"VERILOG_POWER_DEFINE": "USE_POWER_PINS",
+	"SYNTH_DEFINES": "USE_POWER_PINS",
+	"RT_MAX_LAYER": "met3",
+	
+	"GRT_ANTENNA_ITERS": 10,
+    "RUN_HEURISTIC_DIODE_INSERTION": true,
+    "HEURISTIC_ANTENNA_THRESHOLD": 200,
+    "DESIGN_REPAIR_MAX_WIRE_LENGTH": 800,
+    "RUN_POST_GRT_DESIGN_REPAIR": true
+    
+}
