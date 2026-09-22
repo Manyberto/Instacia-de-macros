@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "flow": "Classic",
+    "substituting_steps": {
+      "Odb.WriteVerilogHeader": null
+    }
+  },
+  "RUN_MAGIC_DRC": true,
+  "DESIGN_NAME": "user_proj_convolution",
+  "FP_PDN_MULTILAYER": true,
+  "FP_PDN_CORE_RING": false,
+  "FP_PDN_CHECK_NODES": true,
+  "VERILOG_FILES": [
+    "dir::../../verilog/rtl/convolution/id00001111_conv/ID00001111_aip.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/aipModules.v",
+    "dir::../../verilog/rtl/convolution/bridge_interface_1port_v2/bridge_interface_1port_v2.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/conv_processor.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/conv_processor_FSM.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/conv_processor_mux2to1.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/conv_processor_mux3to1.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/conv_processor_register.v",
+    "dir::../../verilog/rtl/convolution/bridge_interface_1port_v2/ffSR.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/id00001111_conv.v",
+    "dir::../../verilog/rtl/convolution/bridge_interface_1port_v2/ipm_register.v",
+    "dir::../../verilog/rtl/convolution/bridge_interface_1port_v2/ipm_separated_buses.v",
+    "dir::../../verilog/rtl/convolution/id00001111_conv/simple_dual_port_ram_single_clk.v",
+    "dir::../../verilog/rtl/convolution/convolution.v",
+    "dir::../../verilog/rtl/user_proj_convolution.v"
+  ],
+  "VERILOG_FILES_BLACKBOX": [
+    "dir::../../sram_32x32/blackbox/sram_dualPort_32x32.v",
+    "dir::../../sram_64x32/blackbox/sram_dualPort_64x32.v"
+  ],
+  "SYNTH_DEFINES": ["PnR", "USE_POWER_PINS"],
+  "VERILOG_DEFINES": "USE_POWER_PINS",
+  "ERROR_ON_LINTER_ERRORS": false,
+  "CLOCK_PERIOD": 25,
+  "CLOCK_PORT": "io_in[0]",
+  "CLOCK_NET": "convolution0.clk",
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0.000 0.000 850 700",
+  "CORE_AREA": "5.000 5.000 845 695",
+  "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+  "VDD_NETS": [
+    "vccd1"
+  ],
+  "GND_NETS": [
+    "vssd1"
+  ],
+  "EXTRA_VERILOG_MODELS": [
+    "dir::../../sram_32x32/blackbox/sram_dualPort_32x32_stub.v",
+    "dir::../../sram_64x32/blackbox/sram_dualPort_64x32_stub.v"
+  ],
+  "EXTRA_GDS_FILES": [
+    "dir::../../sram_32x32/gds/sram_dualPort_32x32.gds",
+    "dir::../../sram_64x32/gds/sram_dualPort_64x32.gds"
+  ],
+  "EXTRA_LEFS": [
+    "dir::../../sram_32x32/lef/sram_dualPort_32x32.lef",
+    "dir::../../sram_64x32/lef/sram_dualPort_64x32.lef"
+  ],
+  "EXTRA_LIBS": [
+    "dir::../../sram_32x32/lib/sram_dualPort_32x32__nom_tt_025C_1v80.lib",
+    "dir::../../sram_64x32/lib/sram_dualPort_64x32__nom_tt_025C_1v80.lib"
+  ],
+  "FP_PDN_ENABLE_MACROS_GRID": true,
+  "FP_MACRO_HALO": [10.0, 10.0],
+  "MACRO_PLACEMENT_CFG": "dir::macro.cfg",
+  "RUN_IRDROP_REPORT": false,
+  "FP_PDN_VOFFSET": 5,
+  "FP_PDN_HOFFSET": 5,
+  "FP_PDN_VWIDTH": 1.76,
+  "FP_PDN_HWIDTH": 1.76,
+  "FP_PDN_VSPACING": 10,
+  "FP_PDN_HSPACING": 10,
+  "FP_PDN_VPITCH": 50,
+  "FP_PDN_HPITCH": 50,
+  "FP_PDN_MACRO_HOOKS": [
+    ".*i_MEMIN0 vccd1 vssd1 vccd1 vssd1",
+	".*i_MEMIN vccd1 vssd1 vccd1 vssd1",
+	".*i_MEMOUT0 vccd1 vssd1 vccd1 vssd1"
+  ],
+  "PL_TARGET_DENSITY": 0.55,
+  "MAX_TRANSITION_CONSTRAINT": 1.0,
+  "MAX_FANOUT_CONSTRAINT": 16,    
+  "PL_RESIZER_SETUP_SLACK_MARGIN": 0.2,
+  "GRT_RESIZER_SETUP_SLACK_MARGIN": 0.2,
+  "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.2,
+  "PL_RESIZER_HOLD_SLACK_MARGIN": 0.2,
+  "MAGIC_DEF_LABELS": 0,
+  "SYNTH_ABC_BUFFERING": 1,
+  "DIODE_ON_PORTS": "both",
+  "RUN_HEURISTIC_DIODE_INSERTION": 1,
+  "HEURISTIC_ANTENNA_THRESHOLD": 90,
+  "RUN_ANTENNA_REPAIR": 1,    
+  "GRT_ANTENNA_ITERS": 25,
+  "GRT_ANTENNA_MARGIN":5,
+  
+  "DESIGN_REPAIR_MAX_WIRE_LENGTH": 800,
+  "RUN_POST_GRT_DESIGN_REPAIR": true
+  
+}

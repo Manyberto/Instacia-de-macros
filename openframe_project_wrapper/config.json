@@ -1,0 +1,124 @@
+{
+    "DESIGN_NAME": "openframe_project_wrapper",
+    "VERILOG_DEFINES": "PnR",
+    "VERILOG_FILES": [
+        "dir::/../../verilog/rtl/openframe_project_netlists.v",
+        "dir::/../../verilog/rtl/openframe_project_wrapper.v"
+    ],
+  "MACROS": {
+    "user_proj_convolution": {
+      "instances": {
+        "mprj": {
+          "location": [1900, 1858],
+          "orientation": "N"
+        }
+      },
+      "gds": ["dir::../../gds/user_proj_convolution.gds"],
+      "lef": ["dir::../../lef/user_proj_convolution.lef"],
+      "nl": ["dir::../../verilog/gl/user_proj_convolution.v"],
+      "lib": {
+        "*": "dir::../../lib/user_proj_convolution.lib"
+      },
+      "spef": {
+        "nom_*": "dir::../../spef/multicorner/user_proj_convolution.nom.spef",
+        "min_*": "dir::../../spef/multicorner/user_proj_convolution.min.spef",
+        "max_*": "dir::../../spef/multicorner/user_proj_convolution.max.spef"
+      }
+    },
+    "vccd1_connection": {
+      "instances": {
+        "vccd1_connection": {
+          "location": [3122.515, 4327.51],
+          "orientation": "N"
+        }
+      },
+      "gds": ["dir::../../gds/vccd1_connection.gds"],
+      "lef": ["dir::../../lef/vccd1_connection.lef"],
+      "nl": ["dir::../../verilog/gl/vccd1_connection.v"]
+    },
+	"vssd1_connection": {
+      "instances": {
+        "vssd1_connection": {
+          "location": [3122.515 , 2088.51],
+          "orientation": "N"
+        }
+      },
+      "gds": ["dir::../../gds/vssd1_connection.gds"],
+      "lef": ["dir::../../lef/vssd1_connection.lef"],
+      "nl": ["dir::../../verilog/gl/vssd1_connection.v"]
+    }
+  },
+    "CLOCK_PORT": "gpio_in[0]",
+    "CLOCK_PERIOD": 25,
+    "DRT_THREADS":24,
+    "MAX_TRANSITION_CONSTRAINT": 0.5,
+    "ERROR_ON_NL_ASSIGN_STATEMENTS": 0,
+    "ERROR_ON_SYNTH_CHECKS": 0,
+    "ERROR_ON_PDN_VIOLATIONS": 0,
+    "SYNTH_ELABORATE_ONLY": 1,
+    "VERILOG_POWER_DEFINE": "USE_POWER_PINS",
+    "RUN_POST_GPL_DESIGN_REPAIR": 0,
+    "RUN_POST_CTS_RESIZER_TIMING": 0,
+    "RUN_POST_GRT_RESIZER_TIMING": 0,
+    "GLB_RESIZER_DESIGN_OPTIMIZATIONS": 0,
+    "DESIGN_REPAIR_BUFFER_INPUT_PORTS": 0,
+    "RUN_CTS": 0,
+    "FP_PDN_ENABLE_RAILS": 0,
+    "RUN_ANTENNA_REPAIR": 0,
+    "RUN_HEURISTIC_DIODE_INSERTION": 0,
+    "RUN_FILL_INSERTION": 0,
+    "RUN_TAP_ENDCAP_INSERTION": 0,
+    "FP_PDN_VPITCH": 140,
+    "FP_PDN_HPITCH": 140,
+    "FP_PDN_VOFFSET": 18.43,
+    "FP_PDN_HOFFSET": 22.83,
+    "MAGIC_ZEROIZE_ORIGIN": 0,
+    "FP_SIZING": "absolute",
+    "FP_PDN_CORE_RING": 1,
+    "FP_PDN_CORE_RING_VWIDTH": 20,
+    "FP_PDN_CORE_RING_HWIDTH": 20,
+    "FP_PDN_CORE_RING_VOFFSET": -4,
+    "FP_PDN_CORE_RING_HOFFSET": -4,
+    "FP_PDN_CORE_RING_VSPACING": 2.4,
+    "FP_PDN_CORE_RING_HSPACING": 2.4,
+    "FP_PDN_VWIDTH": 2,
+    "FP_PDN_HWIDTH": 2,
+    "FP_PDN_HSPACING": 3.2,
+    "FP_PDN_VSPACING": 3.2,
+    "VDD_NETS": [
+        "vccd1"
+    ],
+    "GND_NETS": [
+        "vssd1"
+    ],
+    "DIE_AREA": "0 0 3166.63 4766.630",
+    "CORE_AREA": "40 40 3126.63 4726.630",
+    "RUN_IRDROP_REPORT": 0,
+    "PDN_MACRO_CONNECTIONS": ["mprj vccd1 vssd1 vccd1 vssd1"],
+    "FP_PDN_CFG": "dir::pdn_cfg.tcl",
+    "FP_DEF_TEMPLATE": "dir::fixed_dont_change/openframe_project_wrapper.def",
+    "RUN_LINTER": 0,
+    "RUN_LVS": 0,
+    "MAGIC_DEF_LABELS": 0,
+    "MAGIC_EXT_USE_GDS": true,
+    "// ApplyDEFTemplate": "permissive because of a bug in LibreLane where the power pins have to be at least declared in strict mode.",
+    "FP_TEMPLATE_COPY_POWER_PINS": true,
+    "FP_TEMPLATE_MATCH_MODE": "permissive",
+    "// CustomApplyDEFTemplate": "deprecated, for use with the plugin",
+    "FP_TEMPLATE_PINS": [
+        "vccd1",
+        "vssd1",
+        "vccd",
+        "vssd",
+        "vccd2",
+        "vssd2",
+        "vssa",
+        "vdda",
+        "vssa1",
+        "vdda1",
+        "vssa2",
+        "vdda2",
+        "vddio",
+        "vssio"
+    ]
+}
